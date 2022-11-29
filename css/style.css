@@ -1,11 +1,40 @@
 body
 {
     margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+a
+{
+    text-decoration: none;
+
+}
+
+.menu__link:hover
+{
+    color: var(--text-color-hover);
+}
+
+.menu__link {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    line-height: 130%;
+    color: var(--text-color);
+}
+
+.orange__text
+{
+    color: var(--alt-color);
+}
+.orange__text:hover
+{
+    color: var(--alt-color-hover);
 }
 
 .list-reset
 {
-    list-style: none;
+    list-style:none;
     padding: 0;
     margin: 0;
 }
@@ -28,7 +57,7 @@ body
 
 .item
 {
-   padding: 1em;
+   padding: 3%;
 }
 
 .social li
@@ -47,4 +76,15 @@ body
 {
     display: flex;
    margin-right: 1em;
+}
+
+
+:root {
+    --text-color: #222;
+    --text-color-hover: #888888;
+    --primary-color: #CACACA;
+    --alt-color: #FD8558;
+    --alt-color-hover: #e34309;
+    --bg-color: #ffffff;
+    --section-color: #DAF1F9;
 }
