@@ -1,447 +1,580 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anow</title>
 
-    <link rel="stylesheet" href="/css/style.css">
-<style>
-    @font-face {
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/adaptationstyle.css" />
+    <link
+  rel="preload"
+  as="image"
+  href="/img/graphics/BackgroundBase.webp"
+/>
+
+
+    <style>
+      @font-face {
         font-family: "Poppins";
         src: url("fonts/Poppins-Regular.eot");
-        src: url("fonts/Poppins-Regular.eot?#iefix")
-        format("embedded-opentype"),
-        url("fonts/Poppins-Regular.woff2") format("woff2")
-        url("fonts/Poppins-Regular.woff") format("woff")
-        url("fonts/Poppins-Regular.ttf") format("truetype");
+        src: url("fonts/Poppins-Regular.eot?#iefix") format("embedded-opentype"),
+          url("fonts/Poppins-Regular.woff2") format("woff2")
+            url("fonts/Poppins-Regular.woff") format("woff")
+            url("fonts/Poppins-Regular.ttf") format("truetype");
         font-weight: normal;
         font-style: normal;
         font-display: swap;
-    }
-</style>
-</head>
+      }
+    </style>
+  </head>
 
-<body>
-    <header class="header" >
-        <div class="header__line">
-            <a href="/" class="header__logo logo">
-                <img src="/img/Logo.svg" alt="Anow's logo" width="86" height="45">
-            </a>
-            <nav class="header___navbar">
-                <ul class="nav__menu menu list-reset">
-                    <li class="menu__item item">
-                        <a href="" class="menu__link orange__text" href="#">demos</a>
-                    </li>
-                    <li class="menu__item item">
-                        <a href="" class="menu__link" href="#">about us</a>
-                    </li>
-                    <li class="menu__item item">
-                        <a href="" class="menu__link" href="#">portofollio</a>
-                    </li>
-                    <li class="menu__item item">
-                        <a href="" class="menu__link" href="#">team</a></li>
-                    <li class="menu__item item">
-                        <a href="" class="menu__link" href="#">news</a>
-                    </li>
-                    <li class="menu__item item">
-                        <a href="" class="menu__link" href="#">contact</a>
-                    </li>
-                    <li class="menu__item item">
-                        <a href="" class="menu__link" href="#">other pages</a>
-                    </li>
-                </ul>
-            </nav>
-            <ul class="header__social social list-reset">
-                <li>
-                    <a href="#" class="social__link">
-                        <img src="/img/content/instagram-social-media.svg" alt="Instagram" class="social-icon">
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="social__link">
-                        <img src="/img/content/telegram-fill.svg" alt="Telegram" class="social-icon">
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="social__link">
-                        <img src="/img/content/twitter-social-logotype.svg" alt="Twitter" class="social-icon">
-
-                    </a>
-                </li>
+  <body>
+    <header>
+      <div class="header__line">
+        <div class="dropdown">
+          <a><img src="/img/MenuMobile.svg" alt="Anow's logo" width="45" height="45" onclick="dropMenuFunc()" class="dropmenu"/></a>
+        
+          <a><img src="/img/Logo.svg" alt="Anow's logo" width="86" height="45" class="dropmenulogo"/></a>
+          <div id="myDropdown" class="dropdown-content">
+            <ul class="nav-menu list-reset">
+              <li class="list-item-gap size-small">
+                <a class="color__orange link__orange" href="#">demos</a>
+              </li>
+              <li class="list-item-gap size-small">
+                <a class="nav-link" href="#">about us</a>
+              </li>
+              <li class="list-item-gap size-small">
+                <a class="nav-link" href="#">portofollio</a>
+              </li>
+              <li class="list-item-gap size-small">
+                <a class="nav-link" href="#">team</a>
+              </li>
+              <li class="list-item-gap size-small">
+                <a class="nav-link" href="#">news</a>
+              </li>
+              <li class="list-item-gap size-small">
+                <a class="nav-link" href="#">contact</a>
+              </li>
+              <li class="list-item-gap size-small">
+                <a class="nav-link" href="#">other pages</a>
+              </li>
             </ul>
-        </div> 
+          </div>
+        </div>
+        <a class="header-logo" href="/">
+          <img src="/img/Logo.svg" alt="Anow's logo" width="86" height="45" />
+        </a>
+        <nav class="header-nav">
+          <ul class="nav-menu list-reset">
+            <li class="list-item-gap size-small">
+              <a class="nav-link color__orange link__orange" href="#">demos</a>
+            </li>
+            <li class="list-item-gap size-small">
+              <a class="nav-link" href="#">about us</a>
+            </li>
+            <li class="list-item-gap size-small">
+              <a class="nav-link" href="#">portofollio</a>
+            </li>
+            <li class="list-item-gap size-small">
+              <a class="nav-link" href="#">team</a>
+            </li>
+            <li class="list-item-gap size-small">
+              <a class="nav-link" href="#">news</a>
+            </li>
+            <li class="list-item-gap size-small">
+              <a class="nav-link" href="#">contact</a>
+            </li>
+            <li class="list-item-gap size-small">
+              <a class="nav-link" href="#">other pages</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="header__social list-reset">
+          <li class="list-item-gap">
+            <a href="#">
+              <img src="/img/content/instagram-social-media.svg" alt="Instagram" class="social-icon" width="30" height="30"
+              />
+            </a>
+          </li>
+          <li class="list-item-gap">
+            <a href="#">
+              <img src="/img/content/telegram-fill.svg" alt="Telegram" class="social-icon" width="30" height="30"
+              />
+            </a>
+          </li>
+          <li class="list-item-gap">
+            <a href="#">
+              <img src="/img/content/twitter-social-logotype.svg" alt="Twitter" class="social-icon" width="30" height="30"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
     </header>
-    
+
     <main>
-<section class="fist-screen section">
-    <div class="decoration decor__back"></div>
-    <div class="decoration decor__border"></div>
-    <div class="decor__semicircle"></div>
-    <div class="decor__planet planet__small"></div>
-    <div class="decor__planet planet__large"></div>
-    <div class="decor__x x__one"></div>
-    <div class="decor__x x__second"></div>
-    <div class="container background__container">
-       
-        <div class="location__name">
-            
-            <h1 class="main__name">design is thinking made visual</h1>
+      <section class="fist-screen section">
+        <div class="decoration decor__back"></div>
+        <div class="decoration decor__border"></div>
+        <div class="decor__semicircle"></div>
+        <div class="decor__planet planet__small"></div>
+        <div class="decor__planet planet__large"></div>
+        <div class="decor__x x__one"></div>
+        <div class="decor__x x__second"></div>
+        <div class="container background__container">
+          <div class="location__name">
+            <h1 class="main__name color__white">design is thinking made visual</h1>
             <div class="btn__line">
-                <button class="btn">Start Now</button>
-                <button class="btn btn__other">See More</button>
+              <button class="btn size-small color__white">Start Now</button>
+              <button class="btn btn__other size-small color__white">See More</button>
             </div>
+          </div>
         </div>
-    </div>
-</section>
-<section class="second-screen">
-    <h2 class="title"><span class="text-title">about</span></h2>
-    <div class="row">
-        <div class="col">
-            <p class="title__orange">about us</p>
-            <p class="textbox">Ultimate experiences with story, emotion and purpose</p>
+      </section>
+      <section class="second-screen section">
+        <h2 class="title"><span class="text-title">about</span></h2>
+        <div class="row row_about-one">
+          <div class="col">
+            <p class="uppercase size-small color__orange l-spacing">about us</p>
+            <p class="textbox">
+              Ultimate experiences with story, emotion and purpose
+            </p>
+          </div>
+          <div class="col">
+            <p class="title__black size-medium">
+              Quisque. Maecenas. Eros mus. Hymenaeos eros. Nisi mauris et
+              adipiscing. Aliquam class bibendum
+            </p>
+            <p class="size-small color__gray" id="tb__graytext">
+              Quisque. Maecenas. Eros mus. Hymenaeos eros. Nisi mauris et
+              adipisc iquam class bibendum non mattis fusceut perspiciatis
+              undeuisque. Maecenas. Eros mus. Hymenaeos eros. Nisi mauris et
+              adipiscing. Aliquam class bibendum mattis fusceut persecenas. Eros
+              mus
+            </p>
+          </div>
         </div>
-        <div class="col">
-            <p class="title__black">Quisque. Maecenas. Eros mus. Hymenaeos eros. Nisi mauris et adipiscing. Aliquam class bibendum</p>
-            <p class="textbox__graytext" id="tb__graytext">Quisque. Maecenas. Eros mus. Hymenaeos eros. Nisi mauris et adipisc iquam class bibendum non mattis fusceut perspiciatis undeuisque. Maecenas. Eros mus. Hymenaeos eros. Nisi mauris et adipiscing. Aliquam class bibendum mattis fusceut persecenas. Eros mus</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
+        <div class="row row_about-second">
+          <div class="col">
             <div class="card_image"></div>
-        </div>
-        <div class="col">
-            <p class="textbox__largetext">“ Our mission is to produce the
-                <span class="text-primary"> highest quality</span>
-                 work for every clients, on every project with full of energy we have ”</p>
+          </div>
+          <div class="col">
+            <p class="textbox__largetext">
+              “ Our mission is to produce the
+              <span class="color__orange"> highest quality</span>
+              work for every clients, on every project with full of energy we
+              have ”
+            </p>
             <div class="botton-flow">
-                <p class="textbox__autor">Frankie Kao</p>
-                <p class="textbox__graytext">ART DIRECTOR PAO</p>
+              <p class="textbox__autor">Frankie Kao</p>
+              <p class="uppercase size-small color__gray">art director pao</p>
             </div>
+          </div>
         </div>
-    </div>
-</section>
+      </section>
 
-<div class="card-opportunity__row">
-    <div class="card-content">
-        <div class="icon-card">
+      <div class="card-opportunity__row">
+        <div class="card-content">
+          <div class="icon-card">
             <div class="circle orange-cirlce"></div>
-            <img class="icon__buttonright" src="/img/graphics/Lightbulb.png" alt="Lightbulb">
+            <img
+              class="icon__buttonright"
+              src="/img/graphics/Lightbulb.webp"
+              alt="Lightbulb"
+              width="64" height="64"
+            />
+          </div>
+          <p class="textbox__largetext" id="center">digital solutions</p>
+          <p class="size-small color__gray" id="center">
+            If you need to redesign your new project, new visual strategy, ux
+            structure or you do have some cool ideas for collaboration
+          </p>
         </div>
-        <p class="textbox__largetext" id="center">digital solutions</p>
-        <p class="textbox__graytext" id="center">If you need to redesign your new project, new visual strategy, ux structure or you do have some cool ideas for collaboration</p>
-    </div>
-    <div class="card-content">
-        <div class="icon-card">
+        <div class="card-content">
+          <div class="icon-card">
             <div class="circle blue-cirlce"></div>
-            <img class="icon__buttonright" src="/img/graphics/Buoy.png" alt="Lightbulb">
+            <img
+              class="icon__buttonright"
+              src="/img/graphics/Buoy.webp"
+              alt="Lightbulb"
+              width="64" height="64"
+            />
+          </div>
+          <p class="textbox__largetext" id="center">creative strategy</p>
+          <p class="size-small color__gray" id="center">
+            If you need to redesign your new project, new visual strategy, ux
+            structure or you do have some cool ideas for collaboration
+          </p>
         </div>
-        <p class="textbox__largetext" id="center">creative strategy</p>
-        <p class="textbox__graytext"id="center">If you need to redesign your new project, new visual strategy, ux structure or you do have some cool ideas for collaboration</p>
-    </div>
-    <div class="card-content">
-        <div class="icon-card">
+        <div class="card-content">
+          <div class="icon-card">
             <div class="circle green-cirlce"></div>
-            <img class="icon__buttonright" src="/img/graphics/Speedmeter.png" alt="Lightbulb">
-        </div>
-        <p class="textbox__largetext" id="center">integrated marketing</p>
-        <p class="textbox__graytext" id="center">If you need to redesign your new project, new visual strategy, ux structure or you do have some cool ideas for collaboration</p>
-    </div>
-</div>
-
-<div class="works-content">
-    <div id="center">
-        <div class="circle orange-cirlce" id="center"></div>
-    </div>
-
-    <div class="works-row">
-        <div class="col col-center">
-            <p class="title__orange">latest works</p>
-            <p class="textbox">take a look around our portfolio.</p>
-        </div>
-        <button class="btn">ViewMore</button>
-    </div>
-
-    <h2 class="title" id="title-right"><span class="text-title">works</span></h2>
-</div>
-
-<section class="threed-screen section">
-    <div class="container-grid">
-        <div class="cell center-cell">
-            <div class="cell-frame">
-                <p class="textbox__largetext" id="text-center">Oblique House</p>
-                <input type="checkbox" class="checkboxes">
-            </div>
-        </div>
-        <div class="cell left-top-cell">
-            <div class="cell-frame">
-                <p class="textbox__largetext " id="text-center">Crazy Max</p>
-                <input type="checkbox" class="checkboxes">
-            </div>
-        </div>
-        <div class="cell left-botton-cell">
-            <div class="cell-frame">
-                <p class="textbox__largetext" id="text-center">Stylish House</p>
-                <input type="checkbox" class="checkboxes">
-            </div>
-        </div>
-        <div class="cell right-top-cell">
-            <div class="cell-frame">
-                <p class="textbox__largetext" id="text-center">Differents</p>
-                <input type="checkbox" class="checkboxes">
-            </div>
-        </div>
-        <div class="cell right-botton-cell">
-            <div class="cell-frame">
-                <p class="textbox__largetext" id="text-center">Bag</p>
-                <input type="checkbox" class="checkboxes">
-            </div>
+            <img
+              class="icon__buttonright"
+              src="/img/graphics/Speedmeter.webp"
+              alt="Lightbulb"
+              width="64" height="64"
+            />
+          </div>
+          <p class="textbox__largetext" id="center">integrated marketing</p>
+          <p class="size-small color__gray" id="center">
+            If you need to redesign your new project, new visual strategy, ux
+            structure or you do have some cool ideas for collaboration
+          </p>
         </div>
       </div>
-</section>
 
-<div class="card-opportunity__row">
-    <div class="col col-center">
-        <p class="title__orange" id="text-center">our skills</p>
-        <p class="textbox__largetext" id="text-center">modern digital creative agency</p>
-        <p class="textbox__graytext" id="text-center">If you need to redesign your new project, new visual strategy, ux structure or you do have some cool ideas for collaboration</p>
+      <div class="works-content">
+        <div id="center">
+          <div class="circle orange-cirlce" id="center"></div>
+        </div>
 
-    </div>
-    <div class="col">
-        <div class="progressbar-frame">
+        <div class="works-row">
+          <div class="col-center">
+            <p class="uppercase size-small color__orange l-spacing">latest works</p>
+            <p class="textbox size-largest">take a look around our portfolio.</p>
+          </div>
+          <button class="btn size-small color__white">ViewMore</button>
+        </div>
+
+        <h2 class="title" id="title-right">
+          <span class="text-title">works</span>
+        </h2>
+      </div>
+
+      <section class="threed-screen section">
+        <div class="container-grid">
+          <div class="cell center-cell">
+            <div class="cell-frame">
+              <p class="textbox__largetext" id="text-center">Oblique House</p>
+              <input type="checkbox" class="checkboxes" />
+            </div>
+          </div>
+          <div class="cell left-top-cell">
+            <div class="cell-frame">
+              <p class="textbox__largetext" id="text-center">Crazy Max</p>
+              <input type="checkbox" class="checkboxes" />
+            </div>
+          </div>
+          <div class="cell left-botton-cell">
+            <div class="cell-frame">
+              <p class="textbox__largetext" id="text-center">Stylish House</p>
+              <input type="checkbox" class="checkboxes" />
+            </div>
+          </div>
+          <div class="cell right-top-cell">
+            <div class="cell-frame">
+              <p class="textbox__largetext" id="text-center">Differents</p>
+              <input type="checkbox" class="checkboxes" />
+            </div>
+          </div>
+          <div class="cell right-botton-cell">
+            <div class="cell-frame">
+              <p class="textbox__largetext" id="text-center">Bag</p>
+              <input type="checkbox" class="checkboxes" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="card-opportunity__row">
+        <div class="col col-center">
+          <p class="skills-position uppercase size-small color__orange l-spacing">our skills</p>
+          <p class="clear-tag__text size-large">
+            modern digital creative agency
+          </p>
+          <p class=" size-small color__gray">
+            If you need to redesign your new project, new visual strategy, ux
+            structure or you do have some cool ideas for collaboration
+          </p>
+        </div>
+        <div class="col">
+          <div class="progressbar-frame">
             <div class="progressbar-name">
-                <p class="title__black clear-tag">illustration</p>
-                <p class="textbox__graytext bar-illustration" id="title-right">90%</p>
+              <p class="progressbar-text size-medium clear-tag">illustration</p>
+              <p class="size-small color__gray bar-illustration" id="title-right">
+                90%
+              </p>
             </div>
             <div class="progressbar-back"></div>
             <div class="progressbar-front bar-illustration"></div>
-        </div>
-        <div class="progressbar-frame">
+          </div>
+          <div class="progressbar-frame">
             <div class="progressbar-name">
-                <p class="title__black clear-tag">web design</p>
-                <p class="textbox__graytext bar-design" id="title-right">80%</p>
+              <p class="progressbar-text size-medium clear-tag">web design</p>
+              <p class="bar-design size-small color__gray" id="title-right">80%</p>
             </div>
             <div class="progressbar-back"></div>
             <div class="progressbar-front bar-design"></div>
-        </div>
-        <div class="progressbar-frame">
+          </div>
+          <div class="progressbar-frame">
             <div class="progressbar-name">
-                <p class="title__black clear-tag">development</p>
-                <p class="textbox__graytext bar-development" id="title-right">95%</p>
+              <p class="progressbar-text size-medium clear-tag">development</p>
+              <p class="bar-development size-small color__gray" id="title-right">
+                95%
+              </p>
             </div>
             <div class="progressbar-back"></div>
             <div class="progressbar-front bar-development"></div>
+          </div>
         </div>
-    </div>
-</div>
+      </div>
 
-<section class="four-screen">
-    <div class="center-screen">
-        <p class="title__orange" id="center">our team</p>
-        <p class="textbox capitalize" id="center">meet our awesome team</p>
-    </div>
+      <section class="four-screen section">
+        <div class="center-screen">
+          <p class="uppercase size-small color__orange l-spacing" id="center">our team</p>
+          <p class="textbox capitalize" id="center">meet our awesome team</p>
+        </div>
 
-    <div class="grid-team">
-        <div class="l-t-cell cell">
+        
+        <div class="grid-team">
+          <div class="l-t-cell cell">
             <div class="team-cell-frame">
-                <p class="clear-tag__text">Creative Director</p>
-                <p class="clear-tag__text textbox__largetext capitalize">anna brown</p>
+              <p class="capitalize clear-tag__text size-small color__white">
+                creative director
+              </p>
+              <p class="capitalize clear-tag__text size-large color__white">
+                anna brown
+              </p>
             </div>
-        </div>
-        <div class="l-b-cell cell">
+          </div>
+          <div class="l-b-cell cell">
             <div class="team-cell-frame">
-                <p class="clear-tag__text">Developer</p>
-                <p class="textbox__largetext capitalize clear-tag__text">margo kesslin</p>
+              <p class="capitalize clear-tag__text size-small color__white">
+                developer
+              </p>
+              <p class="capitalize clear-tag__text size-large color__white">
+                margo kesslin
+              </p>
             </div>
-        </div>
-        <div class="c-t-cell cell">
+          </div>
+          <div class="c-t-cell cell">
             <div class="team-cell-frame">
-                <p class="clear-tag__text">SEO manager</p>
-                <p class="textbox__largetext capitalize clear-tag__text">andy crown</p>
+              <p class="capitalize clear-tag__text size-small color__white">
+                SEO manager
+              </p>
+              <p class="capitalize clear-tag__text size-large color__white">
+                andy crown
+              </p>
             </div>
-        </div>
-        <div class="c-b-cell cell">
+          </div>
+          <div class="c-b-cell cell">
             <div class="team-cell-frame">
-                <p class="clear-tag__text">Director</p>
-                <p class="textbox__largetext capitalize clear-tag__text">kanye jones</p>
+              <p class="capitalize clear-tag__text size-small color__white">
+                director
+              </p>
+              <p class="capitalize clear-tag__text size-large color__white">
+                kanye jones
+              </p>
             </div>
-        </div>
-        <div class="r-t-cell cell">
+          </div>
+          <div class="r-t-cell cell">
             <div class="team-cell-frame">
-                <p class="clear-tag__text">Designer</p>
-                <p class="textbox__largetext capitalize clear-tag__text">katy necker</p>
+              <p class="capitalize clear-tag__text size-small color__white">
+                designer
+              </p>
+              <p class="capitalize clear-tag__text size-large color__white">
+                katy necker
+              </p>
             </div>
-        </div>
-        <div class="r-b-cell cell">
+          </div>
+          <div class="r-b-cell cell">
             <div class="team-cell-frame">
-                <p class="clear-tag__text">Tester</p>
-                <p class="textbox__largetext capitalize clear-tag__text">marta white</p>
+              <p class="capitalize clear-tag__text size-small color__white">
+                tester
+              </p>
+              <p class="capitalize clear-tag__text size-large color__white">
+                marta white
+              </p>
             </div>
+          </div>
         </div>
-    </div>
 
-    <div id="center">
-        <button class="btn">Start work</button>
-    </div>
-</section>
+        <div id="center">
+          <button class="btn size-small color__white">Start work</button>
+        </div>
+      </section>
 
-<section class="fifth-screen">
-    <div class="color-container">
-        <h2 class="title" id="center"><span class="text-title">testimonials</span></h2>
-        <p class="title__black white-tb" id="center-padding">What is your attitude as a small town businessman when it comes to advertising or taking help of an advertising design. What is your attitude as a small town businessman when it comes to advertising or taking help of an advertising design.</p>
-        <div class="row" id="center">
+      <section class="fifth-screen section">
+        <div class="color-container">
+          <h2 class="title" id="center">
+            <span class="text-title">testimonials</span>
+          </h2>
+          <p class="size-medium color__white" id="center-padding">
+            What is your attitude as a small town businessman when it comes to
+            advertising or taking help of an advertising design. What is your
+            attitude as a small town businessman when it comes to advertising or
+            taking help of an advertising design.
+          </p>
+          <div class="row" id="center">
             <div class="image-adapter"></div>
             <div>
-                <p class="textbox__graytext white-tb">Sophie Nguyen</p>
-                <p class="textbox__graytext white-tb">CEO</p>
+              <p class="capitalize size-small color__white">sophie nguyen</p>
+              <p class="size-small color__white">CEO</p>
             </div>
+          </div>
         </div>
-    </div>
-</section>
+      </section>
 
-<section class="six-screen">
-    <div class="center-screen">
-        <p class="title__orange" id="center">the daily planet</p>
-        <p class="textbox__largetext" id="text-center">our interactive news</p>
-        <div class="card-opportunity__row">
-            <div class="card-content">
-                <div class="news-img__one"></div>
-                <div class="row">
-                    <p class="title__orange">lifestyle</p>
-                    <p class="title__orange">design</p>
-                    <p class="textbox__graytext">March 11, 2022</p>
-                </div>
-                <p class="textbox__largetext">insights from interviewing the community</p>
-                <a href="#" class="title__orange orange__text">view more</a>
+      <section class="six-screen section">
+        <div class="center-screen">
+          <p class="uppercase size-small color__orange l-spacing" id="center">the daily planet</p>
+          <p class="textbox__largetext" id="text-center">
+            our interactive news
+          </p>
+          <div class="news-row">
+            <div class="news-content">
+              <div class="news-img img__one"></div>
+              <div class="row" id="left">
+                <p class="news-tag size-small color__orange">lifestyle</p>
+                <p class="news-tag size-small color__orange">design</p>
+                <p class="news-time size-small color__gray">March 11, 2022</p>
+              </div>
+              <p class="size-large">insights from interviewing the community</p>
+              <a href="#" class="size-small color__orange link__orange">view more</a>
             </div>
-            <div class="card-content">
-                <div class="news-img__two"></div>
-                <div class="row">
-                    <p class="title__orange">lifestyle</p>
-                    <p class="title__orange">design</p>
-                    <p class="textbox__graytext">March 11, 2022</p>
-                </div>
-                <p class="textbox__largetext">excelent company and opportunities</p>
-                <a href="#" class="title__orange orange__text">view more</a>
+            <div class="news-content">
+              <div class="news-img img__two"></div>
+              <div class="row" id="left">
+                <p class="news-tag size-small color__orange">lifestyle</p>
+                <p class="news-tag size-small color__orange">design</p>
+                <p class="news-time size-small color__gray">March 11, 2022</p>
+              </div>
+              <p class="size-large">excelent company and opportunities</p>
+              <a href="#" class="size-small color__orange link__orange">view more</a>
             </div>
-            <div class="card-content">
-                <div class="news-img__three"></div>
-                <div class="row">
-                    <p class="title__orange">lifestyle</p>
-                    <p class="textbox__graytext">March 11, 2022</p>
-                </div>
-                <p class="textbox__largetext">ways to increase your website</p>
-                <a href="#" class="title__orange orange__text">view more</a>
+            <div class="news-content">
+              <div class="news-img img__three"></div>
+              <div class="row" id="left">
+                <p class="news-tag size-small color__orange">lifestyle</p>
+                <p class="news-time size-small color__gray">March 11, 2022</p>
+              </div>
+              <p class="size-large">ways to increase your website</p>
+              <a href="#" class="size-small color__orange link__orange">view more</a>
             </div>
+          </div>
         </div>
-    </div>
-</section>
+      </section>
 
-
-<div class="feedback">
-    <div class="row">
-        <div class="admin-info">
+      <div class="feedback">
+        <div class="feedback-row">
+          <div class="admin-info">
             <div class="info-field">
-                <p class="textbox__graytext">adress</p>
-                <p class="textbox__largetext">14 tottenham road, london, england</p>
+              <p class="color__gray info-field__header">adress</p>
+              <p class="info-field__text size-large">
+                14 tottenham road, london, england
+              </p>
             </div>
             <div class="info-field">
-                <p class="textbox__graytext">information</p>
-                <p class="textbox__largetext">info@yourdomain.com (+68) 12004509</p>
+              <p class="color__gray info-field__header">information</p>
+              <p class="info-field__text size-large">
+                info@yourdomain.com (+68) 12004509
+              </p>
             </div>
+          </div>
+          <div class="feedback-info">
+            <div class="name-cell">
+              <input class="f-name" type="text" name="f-name" placeholder="Your name*" />
+            </div>
+            <div class="email-cell">
+              <input class="f-email" type="text" name="f-email" placeholder="Your e-mail*" />
+            </div>
+            <div class="msg-cell">
+              <input class="f-msg" type="text" name="f-msg" placeholder="Your message*" />
+            </div>
+            <button class="btn size-small color__white">Start work</button>
+          </div>
+
+          
+
         </div>
-        <div class="feedback-info">
-                <div class="name-cell">
-                    <input type="text" name="f-name" placeholder="Your name*"/>
-                </div>
-                <div class="email-cell">
-                    <input type="text" name="f-email" placeholder="Your e-mail*"/>
-                </div>
-                <div class="msg-cell">
-                    <input type="text" name="f-msg" placeholder="Your message*"/>
-                </div>
-        </div>
-    </div>
-</div>
+
+      </div>
     </main>
 
     <footer class="footer-site">
-<div class="footer-nav">
-    <div class="footer-nav__items">
-        <a href="/" class="header__logo logo">
-            <img src="/img/Logo.svg" alt="Anow's logo" width="86" height="45">
-        </a>
-        <div class="row">
-            <p class="textbox__graytext">+ (0712) 819 79 555</p>
-            <p class="textbox__graytext">| M: info@example.com</p>
+      <div class="footer-nav">
+        <div class="footer-nav__items">
+            <address>
+                <p class="color__white logo">anow</p>
+              </address>
+          <div class="footer-row">
+            <address>
+              <p class="size-small color__gray">+(0712) 819 79 555</p>
+            </address>
+            <hr class="hr-line">
+            <address>
+              <p class="size-small color__gray">M: info@example.com</p>
+            </address>
+          </div>
         </div>
-    </div>
-    <div class="footer-nav__items">
-        <ul class="list-reset">
-            <li class="item">
-                <a href="" class="menu__link" href="#">Home</a>
+        <div class="footer-nav__items">
+          <ul class="list-reset">
+            <li class="item-main">
+              <a class="nav-link color__white" href="#">Home</a>
             </li>
-            <li class="item">
-                <a href="" class="menu__link" href="#">Home Portfolio</a>
+            <li class="item item-other">
+              <a class="nav-link color__gray" href="#">Home Portfolio</a>
             </li>
-            <li class="item">
-                <a href="" class="menu__link" href="#">Home Agency</a>
+            <li class="item item-other">
+              <a class="nav-link color__gray" href="#">Home Agency</a>
             </li>
-            <li class="item">
-                <a href="" class="menu__link" href="#">Home Architecture</a>
+            <li class="item item-other">
+              <a class="nav-link color__gray" href="#">Home Architecture</a>
             </li>
-        </ul>
-    </div>
-    <div class="footer-nav__items">
-        <ul class="list-reset">
-            <li class="item">
-                <a href="" class="menu__link" href="#">Portfolio</a>
+          </ul>
+        </div>
+        <div class="footer-nav__items">
+          <ul class="list-reset">
+            <li class="item-main">
+              <a class="nav-link color__white" href="#">Portfolio</a>
             </li>
-            <li class="item">
-                <a href="" class="menu__link" href="#">Masonry Portfolio</a>
+            <li class="item item-other">
+              <a class="nav-link color__gray" href="#">Masonry Portfolio</a>
             </li>
-            <li class="item">
-                <a href="" class="menu__link" href="#">Grid Portfolio</a>
+            <li class="item item-other">
+              <a class="nav-link color__gray" href="#">Grid Portfolio</a>
             </li>
-            <li class="item">
-                <a href="" class="menu__link" href="#">Metro Portfolio</a>
+            <li class="item item-other">
+              <a class="nav-link color__gray" href="#">Metro Portfolio</a>
             </li>
-            <li class="item">
-                <a href="" class="menu__link" href="#">Service Details</a>
+            <li class="item item-other">
+              <a class="nav-link color__gray" href="#">Service Details</a>
             </li>
-        </ul>
-    </div>
-    <div class="footer-nav__items">
-        <ul class="list-reset">
-            <li class="item">
-                <a href="" class="menu__link" href="#">Blog</a>
+          </ul>
+        </div>
+        <div class="footer-nav__items">
+          <ul class="list-reset">
+            <li class="item-main">
+              <a class="nav-link color__white" href="#">Blog</a>
             </li>
-            <li class="item">
-                <a href="" class="menu__link" href="#">Blog Style 1</a>
+            <li class="item item-other">
+              <a class="nav-link color__gray" href="#">Blog Style 1</a>
             </li>
-            <li class="item">
-                <a href="" class="menu__link" href="#">Blog Style 2</a>
+            <li class="item item-other">
+              <a class="nav-link color__gray" href="#">Blog Style 2</a>
             </li>
-            <li class="item">
-                <a href="" class="menu__link" href="#">Blog Style 3</a>
+            <li class="item item-other">
+              <a class="nav-link color__gray" href="#">Blog Style 3</a>
             </li>
-            <li class="item">
-                <a href="" class="menu__link" href="#">Licensing</a>
+            <li class="item item-other">
+              <a class="nav-link color__gray" href="#">Licensing</a>
             </li>
-        </ul>
-    </div>
-    
-</div>
+          </ul>
+        </div>
+      </div>
 
-<p class="textbox__graytext" id="center">© Anow. All Rights Reserved 2022 — Designed by
-    <span class="text-primary"> 128.digital.</span>
-    Powered by
-    <span class="text-primary"> Webflow</span>
-</p>
+      <p class="size-small color__gray" id="center">
+        © Anow. All Rights Reserved 2022 — Designed by
+        <span class="color__white"> 128.digital.</span>
+        Powered by
+        <span class="color__white"> Webflow</span>
+      </p>
     </footer>
 
-</body>
+    <script src="/js/main.js"></script>
 
-
+  </body>
 </html>

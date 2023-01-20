@@ -1,0 +1,250 @@
+
+@media screen and (min-width: 0) and (max-width: 600px) {
+  .color-container h2 {
+    font-size: 3.5rem;
+  }
+  .title {
+    line-height: 100px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 920px) {
+  .color-container h2 {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .grid-team {
+    grid-template-columns: repeat(2, 21.875rem);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "l-t-cell c-t-cell"
+      "r-t-cell l-b-cell"
+      "c-b-cell r-b-cell";
+  }
+
+  .container-grid {
+    grid-template-columns: repeat(2, 21.875rem);
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas:
+      "left-top-cell right-top-cell"
+      "center-cell center-cell"
+      "left-botton-cell right-botton-cell";
+    justify-content: center;
+  }
+
+  .news-tag {
+    width: auto;
+  }
+  .news-time {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .news-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-logo,
+  .header-nav {
+    display: none;
+  }
+  .textbox {
+    padding: 0;
+  }
+  .dropbtn {
+    cursor: pointer;
+  }
+
+  .logo-link {
+    display: flex;
+  }
+  .nav-menu {
+    display: block;
+    text-align: center;
+  }
+
+  .nav-link:hover {
+    background-color: #daf1f9;
+    color: var(--text-color-hover);
+  }
+
+  .header__line {
+    justify-content: space-between;
+  }
+
+  .dropbtn:hover,
+  .dropbtn:focus {
+    opacity: 0.9;
+  }
+
+  .link__orange:hover {
+    background-color: #daf1f9;
+    color: var(--alt-color-hover);
+  }
+
+  .dropdown {
+    width: 50%;
+    height: 3.125rem;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 100%;
+    background-color: #fff;
+    border-radius: 5%;
+    z-index: 1;
+  }
+
+  .size-small {
+    padding: 0;
+  }
+
+  .dropdown-content a {
+    background-color: #fff;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    display: block;
+  }
+
+  .show {
+    display: block;
+  }
+
+  .row_about-one {
+    flex-direction: column;
+  }
+  .row_about-second {
+    flex-direction: column;
+  }
+
+  .card_image {
+    height: 27.5rem;
+    margin: 0 auto;
+  }
+  .col {
+    width: 100%;
+    padding: 0 10%;
+    margin: 0;
+    text-align: center;
+  }
+
+  .card-opportunity__row {
+    flex-direction: column;
+  }
+
+  .color-container {
+    padding: 4.6875rem 0 7.4375rem 0;
+  }
+
+  .feedback-row {
+    flex-direction: column;
+  }
+  .admin-info {
+    display: flex;
+    width: 100%;
+    padding: 1%;
+    justify-content: space-between;
+  }
+
+  .feedback-info {
+    padding: 0 10%;
+    width: auto;
+  }
+
+  .info-field {
+    margin: 1%;
+    text-align: center;
+  }
+
+  .footer-site {
+    padding: 5.625rem 0;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .card-opportunity__row {
+    margin: 7.5rem auto 0 auto;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .grid-team {
+    grid-template-columns: 21.875rem;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+      "l-t-cell"
+      "c-t-cell"
+      "r-t-cell"
+      "l-b-cell"
+      "c-b-cell"
+      "r-b-cell";
+  }
+  .center-cell {
+    height: 21.875rem;
+  }
+  .container-grid {
+    grid-template-columns: 21.875rem;
+    grid-template-rows: repeat(5, 21.875rem);
+    grid-template-areas:
+      "left-top-cell"
+      "right-top-cell"
+      "center-cell"
+      "left-botton-cell"
+      "right-botton-cell";
+    justify-content: center;
+    grid-gap: 1.875rem 1.875rem;
+  }
+
+  .planet__large {
+    bottom: -30%;
+    right: -45%;
+  }
+
+  .x__second {
+    top: 25%;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    padding: 0 10%;
+    align-items: center;
+  }
+
+  .footer-nav__items {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main__name {
+    font-size: 4rem;
+    padding: 0 20%;
+  }
+  .location__name {
+   top: 13.625rem;
+  }
+  .btn__line {
+    margin: 30% auto 0 auto;
+  }
+  .title {
+    font-size: 8rem;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .works-row {
+    align-items: center;
+  }
+  .textbox {
+    font-size: 2rem;
+  }
+
+  .info-field__text {
+    font-size: 1rem;
+  }
+}
